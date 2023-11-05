@@ -1,8 +1,6 @@
 
 import { createGlobalStyle } from 'styled-components'
 
-
-
 const GlobalStyle = createGlobalStyle`
     body,
     h1,
@@ -22,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
       background-color: #f1f1f1;
     }
 
-    div::-webkit-scrollbar {
-      width: 12px;
-    }
 `
 
 export default GlobalStyle
