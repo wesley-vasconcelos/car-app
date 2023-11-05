@@ -1,6 +1,6 @@
 {
-    "rewrites": [
-      { "source": "/buscar/:path*", "destination": "/buscar/:path*" }
-    ]
+    "crons": [{
+      "path": "/api/cron",
+      "schedule": "0 10 * * *"
+    }]
   }
-  
