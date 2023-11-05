@@ -7,12 +7,7 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  ${({ maxSize }) =>
-    maxSize &&
-    css`
-      max-width: ${maxSize};
-    `}
-
+ 
   ${({ color }) =>
     color &&
     css`
