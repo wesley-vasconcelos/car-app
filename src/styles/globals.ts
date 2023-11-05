@@ -1,7 +1,11 @@
 
 import { createGlobalStyle } from 'styled-components'
+import { fontRoboto } from './fonts'
+
+
 
 const GlobalStyle = createGlobalStyle`
+  ${fontRoboto}
     body,
     h1,
     h2,
@@ -12,14 +16,14 @@ const GlobalStyle = createGlobalStyle`
     p {
       margin: 0;
       color: #1d1d1d;
-      font-family: "CircularXX";
     }
-
+    
     body {
+      font-family: "roboto";
       height: 100%;
       background-color: #f1f1f1;
     }
-
 `
+
 
 export default GlobalStyle

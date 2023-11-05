@@ -1,14 +1,9 @@
-import { css } from 'styled-components'
+import { css } from 'styled-components';
 
-export const fontCircularXX = css`
-  /* Circular-xx-Regular */
-  @font-face {
-    font-family: 'CircularXX';
-    font-weight: 400;
-    font-display: swap;
-    src: url('') format('truetype'),
+export const fontRoboto = css`
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+  body {
+    font-family: 'Roboto', sans-serif;
   }
-  /* Circular-xx-Italic */
- 
 `
