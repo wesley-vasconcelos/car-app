@@ -2,10 +2,10 @@ import * as S from './styles';
 
 interface CarInfoProps {
   carroInfo: {
-    TipoVeiculo: string;
+    Modelo: string;
     Valor: string;
     Marca: string;
-    Ano: string;
+    AnoModelo: string;
   };
 }
 
