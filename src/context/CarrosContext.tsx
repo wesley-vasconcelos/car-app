@@ -36,16 +36,16 @@ export const useCarros = (): CarrosContextProps => {
 
 type Action =
   | { type: 'SET_MARCAS'; payload: Marca[] }
-  | { type: 'SET_MODELO'; payload: string | null }
-  | { type: 'SET_ANO'; payload: string | null };
+  | { type: 'SET_MODELOS'; payload: string | null }
+  | { type: 'SET_ANOS'; payload: string | null };
 
 const carrosReducer = (state: CarrosState, action: Action): CarrosState => {
   switch (action.type) {
     case 'SET_MARCAS':
       return { ...state, marcas: action.payload };
-    case 'SET_MODELO':
+    case 'SET_MODELOS':
       return { ...state, modeloSelecionado: action.payload };
-    case 'SET_ANO':
+    case 'SET_ANOS':
       return { ...state, anoSelecionado: action.payload };
     default:
       return state;

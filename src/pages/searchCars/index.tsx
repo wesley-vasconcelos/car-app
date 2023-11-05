@@ -5,14 +5,16 @@ import { getMarcas, getModelos, getAnos } from '../../pages/api/api.js';
 import CustomSelect from '../../components/customSelect'
 import ButtonComponent from '../../components/StoreButton';
 import CarInfo from '../../components/cardCar';
+import { SelectChangeEvent } from '@mui/material';
 
-const SearchCars: React.FC = () => {
+const SearchCars = () => {
   const { state, dispatch } = useCarros();
-  const { marcas, modeloSelecionado, anoSelecionado } = state;
+  const {  modeloSelecionado, anoSelecionado } = state;
 
-  const [selectedMarcaId, setSelectedMarcaId] = useState(null);
-  const [selectedModeloId, setSelectedModeloId] = useState(null);
+  const [selectedMarcaId, setSelectedMarcaId] = useState<string>('');
+  const [selectedModeloId, setSelectedModeloId] = useState<string>('');
   const [modelos, setModelos] = useState<any[]>([]);
+  const [marcas, setMarcas] = useState<any[]>([]);
   const [anos, setAnos] = useState<any[]>([]);
   const [carroInfo, setCarroInfo] = useState<any>(null);
 
@@ -20,6 +22,7 @@ const SearchCars: React.FC = () => {
     const fetchMarcas = async () => {
       try {
         const data = await getMarcas();
+        setMarcas(data)
         dispatch({ type: 'SET_MARCAS', payload: data });
       } catch (error) {
         console.error('Erro na requisição:', error);
@@ -63,23 +66,25 @@ const SearchCars: React.FC = () => {
     }
   };
 
-  const handleMarcaChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedMarcaId(null);
+  const handleMarcaChange = (e: SelectChangeEvent<string>) => {
+    setSelectedMarcaId('');
     const selectedMarcaId = e.target.value;
     setSelectedMarcaId(selectedMarcaId);
-    dispatch({ type: 'SET_MODELO', payload: selectedMarcaId });
+    dispatch({ type: 'SET_MODELOS', payload: selectedMarcaId });
     setModelos([]); 
   };
+  
 
-  const handleModeloChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+
+  const handleModeloChange = (e: SelectChangeEvent<string>) => {
     const selectedModelo = e.target.value;
     setSelectedModeloId(selectedModelo);
-    dispatch({ type: 'SET_MODELO', payload: selectedModelo });
+    dispatch({ type: 'SET_MODELOS', payload: selectedModelo });
   };
 
-  const handleAnoChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleAnoChange = (e: SelectChangeEvent<string>) => {
     const selectedAno = e.target.value;
-    dispatch({ type: 'SET_ANO', payload: selectedAno });
+    dispatch({ type: 'SET_ANOS', payload: selectedAno });
   };
 
   
