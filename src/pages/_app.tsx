@@ -1,13 +1,12 @@
-import type { AppProps } from "next/app";
-import GlobalStyles from "../styles/globals.ts";
-import { CarrosProvider } from '../context/CarrosContext.tsx';
+import type { AppProps } from 'next/app';
+import GlobalStyles from '../styles/globals'; 
+import { CarrosProvider } from '../context/CarrosContext'; 
 
-export default function App({ Component, pageProps }: AppProps) {
-
-    return (
-         <CarrosProvider>
-        <GlobalStyles />
-        <Component {...pageProps} />
-      </CarrosProvider>
-    );
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <CarrosProvider>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </CarrosProvider>
+  );
 }

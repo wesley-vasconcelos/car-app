@@ -1,11 +1,9 @@
 
 import { createGlobalStyle } from 'styled-components'
-import { fontCircularXX } from './fonts'
 
 
 
 const GlobalStyle = createGlobalStyle`
-  ${fontCircularXX}
     body,
     h1,
     h2,
@@ -20,10 +18,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      scroll-snap-type: y proximity;
-      scroll-behavior: smooth;
-      overflow-y: scroll;
-      height: 100vh;
+      height: 100%;
       background-color: #f1f1f1;
     }
 
