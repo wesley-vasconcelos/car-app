@@ -5,7 +5,7 @@ module.exports = {
   trailingSlash: true,
   esModule: true,
   reactStrictMode: true,
-  basePath: "/buscar",
+  basePath: "",
   plugins: [["styled-components", { ssr: true }]],
   images: {
     loader: "akamai",

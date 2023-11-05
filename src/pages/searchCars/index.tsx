@@ -132,13 +132,13 @@ const SearchCars = () => {
         label="Buscar"
         color="#14199a" 
         />
-      </S.Content>
       {
         carroInfo &&
         <div style={{ marginTop: '60px'}}>
           <CarInfo carroInfo={carroInfo} />
         </div>
       }
+      </S.Content>
     </S.Container>
   );
 };
