@@ -3,7 +3,7 @@ import { useCarros } from '../../context/CarrosContext';
 import * as S from './styles';
 import { getMarcas, getModelos, getAnos } from '../../pages/api/api.js';
 import CustomSelect from '../../components/customSelect'
-import ButtonComponent from '../../components/StoreButton';
+import ButtonComponent from '../../components/StoreButton/'
 import CarInfo from '../../components/cardCar';
 import { SelectChangeEvent } from '@mui/material';
 
