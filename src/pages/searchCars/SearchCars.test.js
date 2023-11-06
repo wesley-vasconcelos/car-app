@@ -3,8 +3,8 @@ import { render, screen } from "@testing-library/react";
 import { CarrosProvider } from "../../context/CarrosContext";
 import SearchCars from "./index";
 
-jest.describe("SearchCars", () => {
-  jest.it("renders title and subtitle", () => {
+describe("SearchCars", () => {
+  it("renders title and subtitle", () => {
     render(
       <CarrosProvider>
         <SearchCars />
