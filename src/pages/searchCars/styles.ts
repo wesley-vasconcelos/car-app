@@ -15,6 +15,20 @@ export const Content = styled.div`
   max-width: 800px;
 `;
 
+export const Title = styled.h2`
+  font-size: 28px;
+  color: #000;
+  font-weight: 700; 
+  font-family: 'roboto';
+  text-align: center;
+`;
+export const SubTitle = styled.h2`
+  font-size: 22px;
+  color: #000;
+  font-weight: 500; 
+  font-family: 'roboto';
+  text-align: center;
+`;
 export default function DummyComponent() {
   return null;
 }

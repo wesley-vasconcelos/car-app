@@ -46,11 +46,14 @@ const SearchCars = () => {
   };
 
   const handleMarcaChange = (e: SelectChangeEvent<string>) => {
-    setSelectedMarcaId('');
     const selectedMarcaId = e.target.value;
     setSelectedMarcaId(selectedMarcaId);
-    dispatch({ type: 'SET_MODELOS', payload: selectedMarcaId });
+    setSelectedModeloId(''); 
     setModelos([]);
+    setCarroInfo(null);
+    dispatch({ type: 'SET_MODELOS', payload: '' }); 
+    dispatch({ type: 'SET_ANOS', payload: '' }); 
+    setAnos([]);
   };
 
   const handleModeloChange = (e: SelectChangeEvent<string>) => {
@@ -109,6 +112,12 @@ const SearchCars = () => {
   return (
     <S.Container>
       <S.Content>
+       <S.Title>
+          Tabela Fipe
+        </S.Title>
+        <S.SubTitle>
+          Consulte o valor de um veículo de forma gratuita  
+       </S.SubTitle>
         <CustomSelect
           value={selectedMarcaId || ''}
           options={marcas}
@@ -131,7 +140,7 @@ const SearchCars = () => {
         <ButtonComponent
           onClick={handleBuscarClick}
           maxSize="100%"
-          disabled={!selectedMarcaId && !selectedModeloId && !anoSelecionado}
+          disabled={!selectedMarcaId || !selectedModeloId || !anoSelecionado}
           label="Buscar"
           color="#14199a"
         />
