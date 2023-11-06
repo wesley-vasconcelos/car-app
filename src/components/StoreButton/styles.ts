@@ -7,6 +7,7 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-family: 'roboto';
  
   ${({ color }) =>
     color &&

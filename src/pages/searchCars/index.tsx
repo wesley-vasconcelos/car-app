@@ -141,22 +141,22 @@ const SearchCars = () => {
             <CarInfo carroInfo={carroInfo} />
           </div>
         }
+
+      </S.Content>
         <Snackbar
           open={alertOpen}
-          autoHideDuration={3000} // Tempo reduzido para 3 segundos
+          autoHideDuration={3000} 
           onClose={handleAlertClose}
-          anchorOrigin={{ vertical: 'top', horizontal: 'right' }} // Posicionamento no topo direito
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }} 
         >
           <Alert
             onClose={handleAlertClose}
             severity={alertSeverity}
-            style={{ top: '70px', right: '20px', position: 'fixed' }} // Ajustes de posição
+            style={{ top: '10px', right: '20px', position: 'absolute' }} 
           >
-    {alertMessage}
-  </Alert>
-</Snackbar>
-
-      </S.Content>
+          {alertMessage}
+        </Alert>
+      </Snackbar>
     </S.Container>
   );
 };

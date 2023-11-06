@@ -13,6 +13,7 @@ export const Title = styled.h2`
   font-size: 18px;
   color: #FFFF;
   font-weight: 300; 
+  font-family: 'roboto';
 `;
 
 
@@ -26,6 +27,7 @@ export const ValueBackground = styled.div`
   p{
      color: #FFFF;
      font-weight: 500; 
+     font-family: 'roboto';
   }
   `;
 
