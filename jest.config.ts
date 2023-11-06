@@ -1,5 +1,6 @@
 module.exports = {
   clearMocks: true,
+  pageExtensions: ['page.tsx'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
