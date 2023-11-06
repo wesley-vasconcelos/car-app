@@ -33,4 +33,15 @@ const getAnos = async (marcaId, modeloId) => {
   }
 };
 
-export { getMarcas, getModelos, getAnos };
+const getCarInfo = async (marcaId, modeloId, anoSelecionado) => {
+  try {
+    const response = await api.get(
+      `/marcas/${marcaId}/modelos/${modeloId}/anos/${anoSelecionado}`
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error(`Erro ao buscar informações do carro: ${error}`);
+  }
+};
+
+export { getMarcas, getModelos, getAnos, getCarInfo };

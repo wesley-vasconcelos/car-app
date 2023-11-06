@@ -6,7 +6,6 @@ import { fontRoboto } from './fonts'
 
 const GlobalStyle = createGlobalStyle`
   ${fontRoboto}
-    body,
     h1,
     h2,
     h3,
@@ -20,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
     
     body {
       font-family: "roboto";
-      height: 100%;
       background-color: #f1f1f1;
     }
 `
